@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://wesbos.com/llc/slides/#1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ladies Learning WordPress</title>
+
+    <meta charset="utf-8">
+    <script src="./Ladies Learning WordPress_files/default.js"></script>
+    <link rel="stylesheet" href="http://wesbos.com/llc/slides/styles.css" />
+  <style>
+    img {
+      max-width:100%;
+    }
+  </style><meta name="viewport" content="width=1100,height=750"><meta name="apple-mobile-web-app-capable" content="yes"></head>
+  
+  
+
+  
+  <body style="display: none" class="loaded">
+
+    <section class="slides layout-regular template-default">
+      <img src="./Ladies Learning WordPress_files/ladieslearningcode-125x125.gif">
+      <article class="home current">
+        <h1>
+          Ladies Learning 
+          <br>
+          WordPress
+        </h1>
+        <p>
+          <em>Original Content by <a href="http://www.wesbos.com">Wes Bos</a></em>
+          <br>
+          <br>
+          <b>Your Lead Instructors Today:</b> 
+          <br>
+   
+        </p>
+      </article>
+
+      <article class="far-next">
+        <h3>Agenda</h3>
+        <ul class="build">
+          <li class="to-build">Understand what WordPress is and the technology behind it</li>
+          <li class="to-build">Start off installing WordPress locally</li>
+          <li class="to-build">Setup our install of WordPress</li>
+          <li class="to-build">Understand the anatomy of a WordPress theme and how we use it to display content</li>
+          <li class="to-build">Hack our theme</li>
+          <li class="to-build">Work with Facebook + Twitter</li>
+          <li class="to-build">Final Exercise</li>
+        </ul>
+      </article>
+
+      <article id="what-is-wordpress">
+        <h3>
+          What is WordPress?
+        </h3>
+        <ul class="build">
+          <li class="to-build">An Open Source Content Management System</li>
+          <li class="to-build">Initially was used to power blogs (and still is!)</li>
+          <li class="to-build">Now powerful enough to run large websites and applications (CNN, BBC, Mashable, etc...)</li>
+          <li class="to-build">Wordpress powers over <b>60 million</b> websites worldwide.</li></span>
+        </ul>
+        
+      </article>
+
+      <article id="vs" class="center">
+       <h3>WordPress.com VS WordPress.org</h3>
+       <ul class="build">
+        <p class="large to-build">WordPress.com is Hosted for you - No servers or code required!</p>
+        <p class="to-build">.com Doesn't allow for a lot of customization. No plugins or custom themes.</p>
+         <p class="large-font to-build">We will be using .org</p>
+         <p class="to-build">Self-Hosted allows for 100% customization - Themes and plugins oh-my!</p>
+       </div>
+      </article>
+
+      <article>
+        <h3>Jargon and Buzz Words - Welcome to our world</h3>
+        <br/>
+        <div class="build">
+          <p class="to-build"><strong>localhost</strong> - / Local Server (MAMP or WAMP) - A small service that runs on your laptop which mimics the functionality of a large, paid server. We are able to work on our website without uploading it anywhere.</p>
+          <p class="to-build"><strong>PHP tags</strong> - PHP is the programming language WordPress is written in. When we need to use PHP, we put it inside <span class="red"> &lt;?php and ?&gt;</span> tags so our server will know to process it as PHP.</p>
+          <p class="to-build"><strong>stylesheet</strong> - The style.css file within our theme. From this file we control the colours, fonts, sizes and all style elements for our website.</p>
+          <p class="to-build"><strong>Dashboard</strong> - The WordPress back end you see when you first log into your website</p>
+          </div>
+          </article><article>
+          <div class="build">
+          <p class="to-build"><strong>Codex</strong> - The WordPress documentation. Very helpful when you require a reference or assistance with a certain part of WordPress. http://codex.wordpress.org/</p>
+          <p class="to-build"><strong>Permalinks</strong> - Human readable URL. When turned on, WordPress changes the url structure from something like MySite.com/?p=54 to MySite.com/contact-me</p>
+          <p class="to-build"><strong>Theme</strong> - The collection of files that we use to lay out and style our WordPress website. WordPress allows you to easily change and modify themes without losing any of your posts or pages.</p>
+          <p class="to-build"><strong>Template</strong> - A specific file within our theme that lays out either an entire page or part of a page. For example, page.php is the template within our theme that lays out the structure for all of our pages</p>
+          </div>
+          </article><article>
+          <div class="build">
+          <p class="to-build"><strong>Post</strong> - A piece of content that is stored within the database. When we use the word post, we are referring to a blog post.</p>
+          <p class="to-build"><strong>Plugin</strong> - An installable package that adds functionality to your Wordpress website. </p>
+          <p class="to-build"><strong>Query</strong> - A request to the database that asks for certain posts based on several supplied parameters. </p>
+          </div>
+      </article>
+
+      <article>
+        <div class="build">
+          <p class="to-build"><strong>Text Editor:</strong> - A program that runs on your computer, used for editing code..</p>
+          <p class="to-build">All code is written in plain text, so you could just use notepad or textedit to edit your theme</p>
+          <p class="to-build">Using a text editor makes things a lot easier on you and I recommend using one today.</p>
+          <p class="to-build">There are tons of text editors available - Sublime Text, text wrangler, NotePad++, Text Mate, vim... </p>
+          <p class="to-build">I recommend using <strong>Sublime Text</strong> which has an unlimited trial but you are welcome to try anything you like - your table's mentor may have a specific favorite too!</p>
+          <a href="http://www.sublimetext.com/2" class="to-build">http://www.sublimetext.com/2</a>
+          <p class="to-build">Do not try and edit your theme from the WordPress back-end</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Code + Database = <span class="red padbottom">♥</span></h3>
+         <div class="build">
+          <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-21 at 10.07.51 PM.png" alt="" class="to-build">
+          <p class="to-build">The database holds our data and the code defines how and when the data is printed to the page</p>
+          <p class="to-build">The two work together to <span class="red">output HTML</span></p>
+          <p class="to-build"><span class="red">/wp-admin and /wp-includes</span> holds the engine of WordPress - we don't touch it.</p>
+          <p class="to-build"><span class="red">/wp-content</span> holds our specific content like themes, plugins and image uploads.</p>
+        </div>
+      </article>
+
+      <article id="install">
+      <style type="text/css">#install p.small {font-size: 22px; }</style>
+        <h3 class="padBottom">Installing WordPress!</h3>
+        <p>Installing wordpress can be a little tricky the first time, so pay attention here and it will all go smoothly!</p>
+        <p></p>
+        <div class="build">
+          <p class="to-build"><strong>Step 1</strong>: Unzip the wordpress package you downloaded, you'll have a folder called <span class="red">wordpress</span></p>
+          <p class="to-build"><strong>Step 2</strong>: Move that Folder over to your local server (localhost).</p>
+          <p class="small to-build">TIP: Make sure you only have one folder called wordpress. You shouldn't have a folder called wordpress inside of one called wordpress!</p>
+          <p class="small to-build">If you need help finding the folder: <strong>Windows:</strong> Click WAMP icon in tray → <span class="red">www directory</span><strong> Mac: </strong>click MAMP icon → Preferences → Apache Tab </p>
+          <p class="to-build"><strong>Step 3</strong>: Open up PHPmyadmin and create a DB called <span class="red">llc</span></p>
+          <p class="small to-build"><strong>Windows:</strong> Go to <a href="http://localhost/" target="_blank">http://localhost</a> <strong>Mac: </strong>Go to <a href="http://localhost:8888/MAMP/" target="_blank">http://localhost:8888/MAMP/</a> <strong>Both:</strong> click PHPMyAdmin tab</p>
+        </div>
+      </article>
+
+      <article>
+          <div class="build">
+            <p class="to-build"><strong>Step 4</strong>: Rename wp-config-sample.php to wp-config.php and open it</p>
+            <p class="to-build"><strong>Step 5</strong>: Open in your text editor</p>
+            <p class="to-build"><strong>Step 6</strong>: Set the below.</p>
+            <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-21 at 10.26.16 PM.png" alt="" class="to-build">
+            <p class="small to-build"> <span class="red">Windows Users: Leave password blank.</span></p>
+            <p class="to-build"><strong>Step 6</strong>: Surf to <a href="http://localhost/wordpress" target="_blank">http://localhost/wordpress</a> or <a href="http://localhost:8888/wordpress" target="_blank">http://localhost:8888/wordpress</a> in Chrome (or your favorite browser like Firefox or IE10) and install!</p>
+          </div>
+      </article>
+
+      <article>
+        <img src="./Ladies Learning WordPress_files/content" style="display:block; margin:0 auto;" alt="">
+      </article>
+
+      <article>
+        <h3>Customizing settings and adding content</h3>
+      <p>We need to create some <em>dummy content</em> on our website so we can work with the site.</p>
+          <p>Create <strong>7 posts</strong>, fill them with some dummy content Make sure to add a few <strong>tags/categories</strong> to each.</p>
+          <p>Create <strong>3 pages</strong> called Blog, Contact and Home</p>
+          <p>The Boring parts are almost done, I promise! Have some fun any use some Lorem Ipsum:</p>
+          <p><a href="http://hipsteripsum.me/">hipsteripsum.me</a>,<a href="http://cupcakeipsum.com/">cupcakeipsum.com</a>,<a href="http://baconipsum.com/">baconipsum.com</a></p>
+          <!-- Fill in content -->
+      </article>
+
+      <article>
+          <h3>More Settings!</h3>
+          <p>1. Set Blog page and home page accordingly</p>
+          <p class="small">Settings-&gt;Reading</p>
+          <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-17 at 3.05.41 PM.png" alt=""></p>
+          <p>2. switch # of posts to 5 <img src="./Ladies Learning WordPress_files/content(1)" alt=""> </p>
+      </article>
+
+      <article>
+        <p><strong>Remember Permalinks?</strong> Lets turn on pretty permalinks</p>
+        <p class="small">Settings-&gt;permalinks</p>
+        <p><img src="./Ladies Learning WordPress_files/content(2)" alt=""></p>
+      </article>
+
+
+      <article class="center">
+        <p style="font-size:380px; color:gold; margin-top:200px">★</p>
+        <h2>You're done setting things up!</h3>
+      </article>
+
+      <article>
+        <h3 class="padBottom">WordPress Themes</h3>
+        <div class="build">
+          <p class="to-build">Themes control how your site looks </p>
+          <p class="to-build">Your Data (Posts, Page, Comments...) is stored in the database so you wont lose your data if you switch!</p>
+          <p class="to-build">There is no limit to what a WordPress theme can look like</p>
+          <p class="to-build">There are thousands of themes available for free or for pay</p>
+          <p class="to-build">Many great WP Developers got their start tweaking exisitng themes</p>
+          <p class="to-build">So... Thats what we're going to do today!</p>
+        </div>
+      </article>
+
+      <article class="center" id="NO">
+<style type="text/css">#NO h3{ font-size:100px; padding-bottom: 70px;}</style>
+        <h3>Warning!</h3>
+        <h4>Only install <strong>free themes</strong> from WordPress.com/extend/themes or a reputable theme website.</h4>
+        <h4>Many free theme websites are known to embed malicious code into the theme and can cause you to get hacked!</h4>
+      </article>
+
+
+      <article>
+        <h3>Some good and trusted theme resources</h3>
+          <p>Wordpress.org/extend/themes - All Free</p>
+          <p>Themify.me Paid &amp; Free</p>
+          <p>WooThemes.com - Paid and Free</p>
+          <p>ThemeForest.net - Paid / Inexpensive</p>
+      </article>
+
+      <article>
+        <h3>Adding a new theme</h3>
+        <div class="build">
+          <p class="to-build">Dashboard → Appearance → Themes → Install Themes Tab</p>
+          <p class="to-build">We can Search and install right from this interface!</p>
+          <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-21 at 11.01.12 PM.png" alt="" class="to-build">
+        </div>
+      </article>
+      <article>
+        <h3>The Ladies Learning Code theme</h3>
+        <p>The default theme is a little confusing, lets install a simpler one!</p>
+        <p>All themes live in /wp-content/themes</p>
+        <p>Unzip llctheme.zip and drag+drop into <code>wordpress/wp-content/themes</code> </p>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-21 at 11.02.09 PM.png" alt=""></p>
+        <p>Dashboard → Appearance → Themes</p>
+        <p>We Now see our Ladies Learning Code Theme, go ahead and activate it.</p>
+
+      </article>
+
+      <article>
+        <h3>Anatomy of a WordPress Theme</h3>
+        <p>A WordPress Theme is made up of a number of template files that are used to display different pages on your site</p>
+        <h3 class="padTop">For Example...</h3>
+        <p><code>single.php</code> is used to show a single blog post while <code>index.php</code> is used to display the main blog page listing your most recent posts. More on this later.</p>
+      </article>
+
+      <article>
+        <h3>Theme Layout Basics</h3>
+        <p>Most template pages can be stripped down the following:</p>
+        <pre class="prettyprint"><span class="pun">&lt;?</span><span class="pln">php get_header</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+
+{ The Page's Content and the Loop live Here}
+
+</span><span class="pun">&lt;?</span><span class="pln">php get_sidebar</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+
+</span><span class="pun">&lt;?</span><span class="pln">php get_footer</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">        </span></pre>
+
+      </article>
+
+      <article>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-17 at 4.38.53 PM.png" alt="">
+      </article>
+
+      <article>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-21 at 11.23.52 PM.png" alt="">
+      </article>
+
+      <article>
+        <h3>Exercise #2</h3>
+        <div class="build">
+          <p class="to-build">Let's get comfortable with the basic building blocks of our theme. We're going to edit <code>header.php</code>, <code>sidebar.php</code> and <code>footer.php</code></p>
+          <h3 class="padTop to-build">Exercise #2: Task #1</h3>
+          <p class="to-build">Open <code>footer.php</code> add your name to the copyright. Save it and refresh your website.</p>
+          <p class="to-build">You now have your name at the bottom of your website. Easy, eh?</p>
+          <p class="to-build">Let's step it up a notch!</p>
+        </div>
+      </article>  
+
+      <article>
+        <h3 class="">Exercise #2: Task #2</h3>        
+        <div class="build">
+          <p class="to-build">Placing an image in the header.</p>
+          <p class="to-build"><strong>Step 1:</strong> Open <code>header.php</code> and find the line that looks like this:</p>
+          <pre class="prettyprint to-build"><span class="pln"> </span><span class="tag">&lt;h1&gt;</span><span class="pln">&lt;a href="</span><span class="pun">&lt;?</span><span class="pln">php echo home_url</span><span class="pun">(</span><span class="pln"> </span><span class="str">'/'</span><span class="pln"> </span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">"&gt;
+          </span><span class="pun">&lt;?</span><span class="pln">php bloginfo</span><span class="pun">(</span><span class="pln"> </span><span class="str">'name'</span><span class="pln"> </span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/a&gt;&lt;/h1&gt;</span><span class="pln"> </span></pre>
+          <p class="to-build">Delete it!</p>
+          <p class="to-build">Now we're going to do two things: 1. Create a link, 2. Put an image inside that link.</p>
+          
+        </div>
+
+      </article>
+
+      <article class="smallcode">
+          <strong>Making a dynamic Link to our blog home page</strong>
+          <pre class="prettyprint"><span class="pln"> &lt;a href="</span><span class="pun">&lt;?</span><span class="pln">php echo home_url</span><span class="pun">(</span><span class="pln"> </span><span class="str">'/'</span><span class="pln"> </span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">"&gt;IMAGE HERE</span><span class="tag">&lt;/a&gt;</span><span class="pln"> </span></pre>
+          outputs:
+          <pre class="prettyprint"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://localhost/wordpress"</span><span class="tag">&gt;</span><span class="pln">IMAGE HERE</span><span class="tag">&lt;/a&gt;</span></pre>
+          <strong>Add the Image</strong>
+          <p>We need the <code>path to the image</code> and <code>the file name</code></p>
+          <pre class="prettyprint"><span class="pln">&lt;img src="</span><span class="pun">&lt;?</span><span class="pln">php bloginfo</span><span class="pun">(</span><span class="str">"template_directory"</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">/i/header.png" /&gt;</span></pre>
+          outputs:  
+          <pre class="prettyprint"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://localhost/wordpress/wp-content/themes/ladies-learning-code/i/header.png"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></pre>
+
+      </article>
+
+      <article class="smallcode">
+      <style type="text/css">
+      .smallcode pre {
+        font-size:18px;
+      }
+      </style>
+        <h3>Put it all together!</h3>
+        <pre class="prettyprint"><span class="pln">
+  &lt;a href="</span><span class="pun">&lt;?</span><span class="pln">php echo home_url</span><span class="pun">(</span><span class="pln"> </span><span class="str">'/'</span><span class="pln"> </span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">"&gt;
+      &lt;img src="</span><span class="pun">&lt;?</span><span class="pln">php bloginfo</span><span class="pun">(</span><span class="str">"template_directory"</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">/i/header.png" /&gt;
+  </span><span class="tag">&lt;/a&gt;</span><span class="pln">
+        </span></pre>
+        <strong class="padbottom">You should now have a banner image in your header</strong>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 12.14.38 AM.png" alt="">
+      </article>
+
+      <article>
+        <h3 class="padBottom">Adding a picture of you to the sidebar!</h3>
+        <div class="build">
+          <p class="to-build">Open <code>sidebar.php</code> and look for these comments:</p>
+          <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 12.21.27 AM.png" alt="" class="to-build">
+          <p class="to-build">We're going to use the same image code as we used in the header. Our file is called portrait.png</p>
+          <pre class="prettyprint to-build"><span class="pln">&lt;img src='</span><span class="pun">&lt;?</span><span class="pln">php bloginfo</span><span class="pun">(</span><span class="str">'template_directory'</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">/i/portrait.png' /&gt;</span></pre>
+          <p class="to-build">Underneath, write a little something about yourself. Wrap it in &lt;p&gt; and &lt;/p&gt; tags.</p>
+          <pre class="prettyprint to-build"><span class="tag">&lt;p&gt;</span><span class="pln">Welcome to my blog, I'm really into learning how to code!</span><span class="tag">&lt;/p&gt;</span></pre>
+        </div>
+
+      </article>
+
+      <article>
+        <h3>You're Done!</h3>
+        <p>You should now have an image in your sidebar</p>
+        <br>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 12.30.42 AM.png" alt="">
+      </article>
+
+
+      <article class="defs">
+        <h3>What are all these other files?</h3>
+        <p>Different Pages can be displayed with different layouts.</p>
+        <p>Example: 2010 Archives can have a different layout than a category view.</p>
+         <p>Let's take a look at the important template files ones in our theme... </p><p>
+      </p></article>
+      <article>
+        <!-- <p><strong>404.php</strong> - Displays when no page is found</p> -->
+        <p><strong>archive.php</strong> Shows Archives of old posts</p>
+        <!-- <p><strong>attachment.php </strong>- Not really used, for displaying indivdual pictures</p> -->
+        <p><strong>author.php</strong> - Displaying all posts by a certain author</p>
+        <p><strong>category.php</strong> -  Displaying all posts within a certain Category</p>
+        <!-- <p><strong>comments.php </strong>- The layout of comments under your posts</p> -->
+        <p><strong>footer.php</strong> - The footer that is appended at the bottom of every page </p>
+        <p><strong>functions.php</strong>  -Commonly used for enabling theme features such a custom navigations and post thumbnail sizes
+      </p></article>
+
+      <article class="defs">
+        <p><strong>header.php</strong>- The footer that is appended at the bottom of every page </p>
+        <!-- <p><strong>humans.txt</strong>-  </p> -->
+        <!-- <p><strong>/i</strong>-  </p> -->
+        <p><strong>index.php</strong>- The front page of your blog, displays the latest <em>n</em> posts  </p>
+        <!-- <p><strong>/js</strong>-  </p> -->
+        <p><strong>loop.php</strong> - A reuseable file to display posts (much more later!) </p>
+        <p><strong>page.php</strong>-  Default template for displaying pages</p>
+        <!-- <p><strong>screenshot.png</strong>-  </p> -->
+        <p><strong>search.php</strong>- Template for displaying search results  </p>
+        <!-- <p><strong>searchform.php</strong>-  </p> -->
+        <p><strong>sidebar.php</strong>- Sidebar that is appended to every page </p>
+        <p><strong>single.php</strong>- Default template used for displaying a single post </p>
+        <!-- <p><strong>style.css</strong>-  </p> -->
+        <p><strong>tag.php</strong> - Displaying all posts within a certain tag </p>
+      </article>
+
+<!--       <article>
+        <h3>But how does it know what file to use?</h3>
+        <p>WordPress has something called the Template Hierarchy.</p>
+        <img src="http://codex.wordpress.org/images/thumb/1/18/Template_Hierarchy.png/750px-Template_Hierarchy.png">
+      </article>
+
+      <article class="">
+        <h3>When someone visits your website, wordpress figured out what sort of page they are looking for based on this Hierarchy </h3>
+        <p>Print this out and tape it to your wall. Very important in understanding theme development.</p>
+        <br><br>
+        <strong><p>Lets Step through mysite.com/tag/dogs</p></strong>
+        <p>What Page? &rarr; archive page &rarr; What kind? A tag &rarr; Do we have tag-dogs.php? nope. &rarr; Do we have tag-3.php? Nope &rarr; Do we have tag.php? Yep! Lets use that!</p>
+        <p>If wordpress doesnt find a template file, it always falls back to index.php to try and display it</p>
+
+      </article> -->
+
+
+      <article>
+        <h3>CSS 101</h3>
+        <div class="build">
+          <p class="to-build">Before we can start customizing our WordPress theme, it will be helpful to learn the basics of CSS. We won't be diving too deep into CSS as its a huge topic on its own, but lets take a quick look at it.</p>
+          <p class="to-build">CSS stands for Cascading Style Sheets, they allow you easily add style to the elements on your website. Examples of elements are heading tags, images, divs (content and sidebars), links and lists.</p>
+          <p class="to-build">A basic CSS definition has three parts: <strong>selector, property and value.</strong> </p>    
+        </div>
+      </article>
+
+<article>
+<h3>Selectors</h3>
+        <p>The <strong>Selector</strong> defines which element the CSS will be applied to.</p>
+        <pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"wrapper"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/div&gt;</span><span class="pln"> 
+div#wrapper { ... }
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"post"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/div&gt;</span><span class="pln"> 
+div.post { ... }
+
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"date"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/span&gt;</span><span class="pln"> 
+span.date { ... }
+
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln"> </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"meta"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">  
+span.category, div.meta { … } 
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"parent"</span><span class="tag">&gt;&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"child"</span><span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;</span><span class="pln"> 
+div.parent div.child { ... }
+
+        </span></pre>  
+</article>   
+
+
+<article>
+  <h3>The Property and Value</h3>
+  <p>The <strong>property</strong> defines which style is being set on the current <strong>selector</strong> and the value set it.</p>
+  <p>There are hundreds of CSS Properties, here a few popular ones for a div with the ID of wrapper</p>
+<pre class="prettyprint"><span class="com">#wrapper {</span><span class="pln">
+  background </span><span class="pun">:</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
+  border</span><span class="pun">:</span><span class="lit">2px</span><span class="pln"> solid green</span><span class="pun">;</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="typ">Georgia</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln"> 
+</span><span class="pun">}</span><span class="pln"> </span></pre>
+<p>There are a bunch of them on your cheat sheet. Lets go through them now...</p>
+</article>
+
+
+<article>
+<pre class="prettyprint"><span class="pln">a </span><span class="pun">{</span><span class="pln">
+  text</span><span class="pun">-</span><span class="pln">decoration</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Removes all underlines from links */</span><span class="pln">
+  color</span><span class="pun">:</span><span class="pln"> blue</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Changes all links to blue */</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<pre class="prettyprint"><span class="pln">a</span><span class="pun">:</span><span class="pln">hover </span><span class="pun">{</span><span class="pln">
+  color</span><span class="pun">:</span><span class="pln"> red</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Changes all links to red  only when we hover*/</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">post </span><span class="pun">{</span><span class="pln">
+  background </span><span class="pun">:</span><span class="pln"> url</span><span class="pun">(</span><span class="pln">relative</span><span class="pun">/</span><span class="pln">pathp</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">the</span><span class="pun">/</span><span class="pln">background</span><span class="pun">.</span><span class="pln">png</span><span class="pun">);</span><span class="pln"> </span><span class="com">/* Add an image to the background */</span><span class="pln">
+  border</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3px</span><span class="pln"> solid yellow</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* add a yellow border */</span><span class="pln">
+  padding</span><span class="pun">:</span><span class="lit">20px</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Increase padding to 20px */</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+</article><article>
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">post h2 a </span><span class="pun">{</span><span class="pln"> </span><span class="com">/* finds .post -&gt; Heading 2 -&gt; links */</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">40px</span><span class="pun">;</span><span class="pln"> 
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> georgia</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* change the font */</span><span class="pln">
+  border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span class="lit">3px</span><span class="pln"> solid goldenRod</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Changes the bottom border only to goldenRod colour*/</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+<pre class="prettyprint"><span class="pln">ol li </span><span class="pun">{</span><span class="pln"> </span><span class="com">/* Selects all ordered list items */</span><span class="pln">
+  list</span><span class="pun">-</span><span class="pln">style</span><span class="pun">-</span><span class="pln">type</span><span class="pun">:</span><span class="pln"> upper</span><span class="pun">-</span><span class="pln">roman</span><span class="pun">;</span><span class="pln">  </span><span class="com">/* Changes from 1,2,3 to I, II, III...*/</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+</article><article>
+
+<pre class="prettyprint"><span class="pun">.</span><span class="pln">more </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">float</span><span class="pun">:</span><span class="pln"> left</span><span class="pun">/</span><span class="pln">right</span><span class="pun">/</span><span class="pln">none</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* floats an element to the left or right of its relative parent */</span><span class="pln">
+  text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">/</span><span class="pln">left</span><span class="pun">/</span><span class="pln">right</span><span class="pun">/</span><span class="pln">inherit</span><span class="pun">;</span><span class="pln">
+  margin</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10px</span><span class="pln"> </span><span class="lit">20px</span><span class="pln"> </span><span class="lit">15px</span><span class="pln"> </span><span class="lit">25px</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Top Right Bottom Left margin values*/</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln">bold</span><span class="pun">;</span><span class="pln">
+  width</span><span class="pun">:</span><span class="lit">100</span><span class="pun">%;</span><span class="pln">
+  height</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;</span><span class="pln">
+  overflow</span><span class="pun">:</span><span class="pln">scroll</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* anything over 500px high will have scrollbars */</span><span class="pln">
+</span><span class="pun">}</span></pre>
+  
+</article>
+
+   
+
+
+
+
+      <article>
+        <h3>Exercise #3: Theme Customization!</h3>
+        <p>Now that we have a good feel for our theme layout, let's customize it a little more</p>
+        <p><strong>1. </strong>Change the background colour and add an image</p>
+        <p><strong>2. </strong>Change the link underline colour</p>
+        <p><strong>3. </strong>Take the underline off the links only in the sidebar</p>
+        <p><strong>4. </strong>Add a hover colour to our navigation</p>
+      </article>
+
+      <article>
+        <h3>1. Change the background colour</h3>
+        <div class="build">
+          <p class="to-build">Open your style.css file</p>
+          <p class="to-build">Locate the line that sets the body background colour</p>
+          <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 12.59.53 PM.png" alt="" class="to-build">
+          <p class="to-build">Change it to whatever colour you want!</p>
+<p class="to-build"><span class="block" style="background: #BADA55;">#BADA55</span> <span class="block" style="background: #B1009A; color:white;">#B1009A</span> <span class="block" style="background: pink; color:white;">pink</span>
+<span class="block" style="background: papayaWhip;">papayaWhip</span> <span class="block" style="background: goldenrod; color:white;">goldenrod</span> <span class="block" style="background: seaGreen; color:#fff;">seaGreen</span><br><br>
+          <span class="block" style="background: whiteSmoke;">whiteSmoke</span>
+          <span class="block" style="background:tomato;">tomato</span>
+          <span class="block" style="background:thistle;">thistle</span>
+          <span class="block" style="background:skyBlue;">skyBlue</span>
+          <span class="block" style="background:yellowGreen;">yellowGreen</span>
+
+          </p>
+          <p class="to-build">Take it one step further and add an image into the background</p>
+          <pre class="prettyprint to-build"><span class="pln">background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#fff url(i/background.png);</span></pre>
+        </div>
+      </article>
+
+      <article>
+        <h3>2. Change the link underline colour</h3>
+        <p>All of our links have a yellow underline. We use the <span class="red">a</span> selector in our style.css file to specify the bottom border.</p>
+        <p>Find the following line and change #ECD018 to a new colour</p>
+        <pre class="prettyprint"><span class="pln">border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span class="lit">1px</span><span class="pln"> solid </span><span class="com">#ECD018;</span></pre>
+          <p>
+<span class="block" style="background: #BADA55;">#BADA55</span> <span class="block" style="background: #B1009A; color:white;">#B1009A</span> <span class="block" style="background: pink; color:white;">pink</span>
+<span class="block" style="background: papayaWhip;">papayaWhip</span> <span class="block" style="background: goldenrod; color:white;">goldenrod</span> <span class="block" style="background: seaGreen; color:#fff;">seaGreen</span><br><br>
+          <span class="block" style="background: whiteSmoke;">whiteSmoke</span>
+          <span class="block" style="background:tomato;">tomato</span><br><br>
+          <span class="block" style="background:thistle;">thistle</span>
+          <span class="block" style="background:skyBlue;">skyBlue</span>
+          <span class="block" style="background:yellowGreen;">yellowGreen</span>
+          <span class="block" stlye="background:lemonChiffon">lemonChiffon</span>
+          </p>
+
+      </article>
+
+      <article>
+         <h3>3. Take the underline off the links only in the sidebar</h3>
+        <div class="build">
+          <p class="to-build">We don't need underlines on the sidebar links. </p>
+          <p class="to-build">With CSS we can target only the links in the sidebar and specify no underline</p>
+          <p class="to-build">Scroll down in your style.css and find the <span class="red">Sidebar Section</span></p>
+          <p class="to-build">Apply a new style to <span class="red">.sidebar a</span> like so:</p>
+          <pre class="prettyprint to-build"><span class="pln">          </span><span class="pun">.</span><span class="pln">sidebar a </span><span class="pun">{</span><span class="pln">
+            border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+          </span><span class="pun">}</span><span class="pln">
+          </span></pre>
+          <p class="to-build">If you like, go crazy adding more styles to your sidebar links. </p>
+        </div>
+
+      </article>
+
+      <article>
+        <h3>4. Add a hover colour for our navigation links </h3>
+        <div class="build">
+          <p class="to-build">For this, we use the CSS <span class="red">pseudo selector, :hover</span></p>
+          <p class="to-build">Our regular selector looks like this</p>
+          <pre class="prettyprint to-build"><span class="pun">.</span><span class="pln">menu ul li a </span><span class="pun">{...}</span></pre>
+          <p class="to-build">So our hover selector looks like this</p>
+          <pre class="prettyprint to-build"><span class="pun">.</span><span class="pln">menu ul li a</span><span class="pun">:</span><span class="pln">hover </span><span class="pun">{...}</span></pre>
+          <p class="to-build">Lets add a <span class="block" style="background: #BADA55;">#BADA55</span> background</p>
+          <pre class="prettyprint to-build"><span class="pun">.</span><span class="pln">menu ul li a</span><span class="pun">:</span><span class="pln">hover </span><span class="pun">{</span><span class="pln"> background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#BADA55;}</span></pre>
+        </div>
+      </article>
+
+<!--       <article>
+        <h3>Lets try it!</h3>
+        <p>Open up a few files template files and type <pre>"Hello, I'm editing {insert the name of the file here}"</pre> at the top. Save those files and them surf around your website.</p>
+        <p>Can you find where you made the edits?</p>
+
+        <p><img src="http://cl.ly/BvVT/Screen%20Shot%202011-11-17%20at%204.00.43%20PM.png"></p>
+        <p><img src="http://cl.ly/BuYw/Screen%20Shot%202011-11-17%20at%204.01.16%20PM.png" alt=""></p>
+      </article>
+ -->
+
+
+      <article class="center">
+        <h3 class="fullSlide">The Loop</h3>
+      </article>
+
+      <article>
+        <h3>What is the loop?</h3>
+        <div class="build">
+          <p class="to-build">The loop is the lifeblood of a WordPress Theme, is it use to iterate over and display each of the posts that are available on a given page.</p>
+          <h3 class="padTop to-build">The Loop in plain english</h3>
+          <p class="to-build">“For as long as there are posts to show, show them”</p>
+          <p class="to-build">Our home page loop shows 5 posts, but a single post page only shows 1.</p>
+          <p class="to-build">Every page has at least a basic loop to output that page's content.</p>
+        </div>
+      
+      </article>
+
+      <article>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 5.58.51 PM.png" alt=""></p>
+      </article>
+
+      <article>
+        <h3>Pseudo Loop</h3>
+        <p>This is the logic behind the loop in plain english</p>
+<pre class="prettyprint"><span class="pln">  </span><span class="kwd">if</span><span class="pln"> we have posts
+      </span><span class="kwd">while</span><span class="pln"> we have posts
+         </span><span class="lit">1.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Code</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> here </span><span class="kwd">is</span><span class="pln"> run once </span><span class="kwd">for</span><span class="pln"> every piece of content 
+            retrieved </span><span class="kwd">from</span><span class="pln"> the database
+         </span><span class="lit">2.</span><span class="pln"> </span><span class="typ">We</span><span class="pln"> might want to output the title</span><span class="pun">,</span><span class="pln"> the date </span><span class="kwd">and</span><span class="pln"> the content
+      </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
+  </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">if</span></pre>
+      <h3 class="padTop">Confused?</h3>
+      <p>Lets step through how WordPress works if someone visits your blog home page and when someone visit your blog page.</p>
+
+      </article>
+
+      <article>
+        <h3>The Loop Steps</h3>
+        <div class="build">
+          <p class="to-build">1. The blog page is requested by the user. Wordpress asks the database for all content for that page.</p>
+          <p class="to-build">2. The database returns 5 of the latest blog posts</p>
+          <p class="to-build">3. Wordpress first grab the header.php file and starts the page output</p>
+          <p class="to-build">4. Wordpress then hits the loop. Since we have 5 posts from the database, we output the code within the loop 5 times</p>
+          <p class="to-build">5. Wordpress is done the loop, it moves on and outputs the sidebar and the footer</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>The Code</h3>
+        <p>A stripped down look outputting only the title and the content.</p>
+<pre class="prettyprint"><span class="pun">&lt;?</span><span class="pln">php </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> have_posts</span><span class="pun">()</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> have_posts</span><span class="pun">()</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> the_post</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;h2&gt;</span><span class="pun">&lt;?</span><span class="pln">php the_title</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
+    </span><span class="pun">&lt;?</span><span class="pln">php the_content</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+
+</span><span class="pun">&lt;?</span><span class="pln">php endwhile</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
+      <h3 class="">Still Confused? Dont Worry!</h3>
+      <p>Our wordpress theme comes with the loop.php which handles most of this for you.</p>
+      <p>You just need to be aware of how the loop works and what it looks like so you can edit it!</p>
+      </article>
+
+      <article>
+        <h3>Template Tags</h3>
+        
+        <div class="build">
+        <p class="to-build">Wondering how to actually get your content onto the page while you're inside the loop?</p>
+          <p class="to-build">Template tags are short little PHP functions that will output content from your site.</p>
+          <p class="to-build">No knowledge of PHP is required.</p>
+          <p class="to-build">Most template tags only work within the loop</p>
+          <p class="to-build">Others are global and can be used anywhere on the site</p>
+          <p class="to-build">Remember we used <span class="red">&lt;?php echo home_url( '/' ); ?&gt;</span> in our header?</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Template Tag Examples</h3>
+        <div class="build">
+          <p class="to-build">There are hundreds of template tags</p>
+          <p class="small to-build"><a href="http://codex.wordpress.org/Template_Tags">http://codex.wordpress.org/Template_Tags</a></p>
+          <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 6.24.33 PM.png" alt="" class="to-build">
+          <p class="to-build">Lets take a look at some of the commonly used ones.</p>
+        </div>
+      </article>
+
+      <article>
+        <div class="build">
+          <p class="to-build">&lt;?php the_title(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_content(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_excerpt(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_permalink(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_time(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_tags(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_category(); ?&gt;</p>
+          <p class="to-build">&lt;?php comments_template(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_author(); ?&gt;</p>
+          <p class="to-build">&lt;?php the_post_thumbnail(); ?&gt;</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Exercise #4: Working with single.php and the loop</h3>
+        <p>1. Open single.php in your editor</p>
+        <p>Type <span class="red">Hello, I'm editing single.php!</span> on the first line available in the safe zone.</p>
+        <p>Save the file and go to a single post on your website</p>
+        <p>Do you see where it says <span class="red">Hello, I'm editing single.php!</span> </p>
+        <p>We dont see this on any other page because single.php only controls single blog posts.</p>
+      </article>
+
+      <article>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-17 at 4.00.43 PM.png"></p>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-17 at 4.01.16 PM.png" alt=""></p>
+      </article>
+
+      <article>
+        <h3>2. Add a post thumbnail with template tags to our single.php</h3>
+        <p>Want to associate an image with each of your posts? Go into the wordpress admin an edit one of your posts.</p>
+        <p>At the bottom right, click set featured image.<img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.31.47 PM.png"></p>
+        <p>Select and upload a file</p>
+        <p>When the upload is finished, scroll down and select "use as featued image"</p>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.33.17 PM.png" alt="">
+      </article>
+
+      <article>
+        <div class="build">
+        <p class="to-build">Click update <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.35.29 PM.png" alt=""></p>
+          <p class="to-build">and then view the post. <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.35.53 PM.png" alt=""></p>
+          <p class="to-build">The image doesn't appear! Why not? We need to use the template tag to add it to our theme!</p>
+          <p class="to-build">Remember <span class="red">&lt;?php the_post_thumbnail(); ?&gt;</span> Place it just above our <span class="red">&lt;?php the_content(); ?&gt;</span> template tag</p>
+          <p class="to-build"><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.43.19 PM.png"></p>
+        </div>
+
+      </article>
+
+      <article class="smallcode">
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.44.17 PM.png" alt="">
+        <p>Almost Perfect, lets pass our tag some options to left align.</p>
+        <pre class="prettyprint"><span class="pun">&lt;?</span><span class="pln">php the_post_thumbnail</span><span class="pun">(</span><span class="str">'thumbnail'</span><span class="pun">,</span><span class="pln"> array</span><span class="pun">(</span><span class="str">'class'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'alignleft'</span><span class="pun">));</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
+      </article>
+
+      
+
+      <article>
+        <h3>Custom Page Templates</h3>
+        <div class="build">
+          <p class="to-build">Sometimes we don't want the same old structure for every single page</p>
+          <p class="to-build">What if we want one page to have a totally different structure? No sidebar? Three Columns? Full page map?!</p>
+          <p class="to-build">The sky is the limit!</p>
+          <p class="to-build">For this, we use something called custom page templates</p>
+          <p class="to-build">We can create many templates that are similar to page.php and assign them to various pages</p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Exercise #5: Creating a Custom Page template</h3>
+        <div class="build">
+          <p class="to-build">We're going to create two custom page templates</p>
+          <p class="to-build">The first one will be a simple page without a sidebar for our pages that don't require a sidebar, like our contact page!.</p>
+          <p class="to-build">The second will be our custom landing page for our home page.</p>
+          <p class="to-build">Lets get started!</p>
+          <p class="to-build"><strong>Step 1:</strong> Duplicate our <span class="red">page.php</span> file and rename it <span class="red">page-nosidebar.php</span></p>
+          <p class="to-build"><strong>Step 2:</strong> at the top of <span class="red">page-nosidebar.php</span> let name our template with:</p>
+          <pre class="prettyprint to-build"><span class="pun">&lt;?</span><span class="pln">php </span><span class="com">/* Template Name: No Sidebar Template */</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
+        </div>
+
+      </article>
+
+      <article>
+        <p>Your Code should look something like this:</p>
+        <br>
+        <img src="./Ladies Learning WordPress_files/content(3)" alt="">
+      </article>
+      <article>
+        <div class="build">
+          <p class="to-build"><strong>Step 3:</strong> We don't want a sidebar for this page, so go ahead and delete <span class="red">&lt;?php get_sidebar(); ?&gt;</span>. Make sure to save your file after this change. </p>
+          <p class="to-build"><strong>Step 4:</strong> Go to the WordPress dashboard, and edit your contact page.</p>
+          <p class="to-build">You'll now see under "Page Attributes" we have a template dropdown.</p>
+          <p class="to-build"><img src="./Ladies Learning WordPress_files/content(4)" alt=""></p>
+          <p class="to-build">Select Contact Page and click update then view. <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.35.29 PM.png" alt=""></p>
+        </div>
+      </article>
+
+      <article>
+        <h3>Building a template for our home page</h3>
+        <p>Let's create a new page called <span class="red">page-home.php</span></p>
+        <p>This time, fill it with the following Markup:</p>
+<pre class="prettyprint"><span class="pun">&lt;?</span><span class="pln">php </span><span class="com">/* Template Name: Home Page */</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+</span><span class="pun">&lt;?</span><span class="pln">php get_header</span><span class="pun">();</span><span class="pln">  </span><span class="pun">?&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"home"</span><span class="tag">&gt;</span><span class="pln">
+    Coming Soon...
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="pun">&lt;?</span><span class="pln">php get_footer</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
+
+      </article>
+
+      <article>
+        <img src="./Ladies Learning WordPress_files/content(5)" style="" alt="">
+        <p>Edit your home page and assign the "Home Page Template" </p>
+        <p>We will come back to this in our final exercise and build out a custom landing page!</p>
+      </article>
+
+      <article>
+        <h3>Exercise #6: Widgets!</h3>
+        <p>Widgets are modular items that can be added to your sidebar</p>
+        <p>How do we add one?</p>
+        <p>Let's add our latest tweets to our sidebar! Click the link below and log into your twitter account. Sit back if you aren't on twitter</p>
+        <p class="small"><a target="_blank" href="http://twitter.com/about/resources/widgets/widget_profile">http://twitter.com/about/resources/widgets/widget_profile</a></p>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2012-11-05 at 4.31.31 PM.png" alt=""></p>
+      </article>
+
+      <article>
+        <p>Go ahead and fill out all the info you wish - you can use any of the available widgets for this exercise</p>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2012-11-05 at 4.32.40 PM.png" alt="">
+      </article>
+
+      <article>
+        <p>When done, click <span class="red">'Create Widget'</span> and copy the code provided.</p>
+        <p>Now lets go ahead and add it to our theme</p>
+      </article>
+
+      <article class="cols">
+        
+        <p><strong>Step 1:</strong> Dashboard → Appearance → Widgets</p>
+        <p><strong>Step 2:</strong> From the Available Widgets box, Drag and drop the text widget into your "Primary Widget Area"</p>
+        <p><strong>Step 3:</strong> Fill in a Title of your choice.</p>
+        <p><strong>Step 4:</strong> Paste the code that twitter provided you into the big white box. Click Save.</p>
+      </article>
+
+      <article class="center">
+        <h3>Like So:</h3>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2012-11-05 at 4.42.47 PM.png" alt=""></p>
+      </article>
+
+      <article class="center">
+        <h3>Save it and you now have your twitter feeding into your sidebar!</h3>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2012-11-05 at 4.43.13 PM.png" alt=""></p>
+      </article>
+
+      <article>
+        <h3>Plugins</h3>
+        <p>WordPress can only include so much functionality in the base package</p>
+        <p>When you need more functionality, plugins come to the rescue!</p>
+        <p>There is a huge community of developers that create plugins that you can install for free.</p>
+        <p>Can be as small as adding a popup photo gallery to as large as running a social network!</p>
+      </article>
+
+      <article>
+        <p>All Plugins live in /wp-content/plugins but we can also interface with them via the dashboard, just like themes!</p>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 12.17.14 AM.png" alt=""></p>
+      </article>
+
+      <article>
+        <p>You can Delete the plugins you don't want</p>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 12.20.30 AM.png" alt=""></p>
+        <p>And Activate the ones you need</p>
+        <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 12.22.56 AM.png" alt=""></p>
+        <p>Akismit is 100% required to block spammers, you must sign up for a Free account</p>
+        <p class="small"><a href="https://akismet.com/signup/#free">https://akismet.com/signup/#free</a></p>
+      </article>
+
+      <article>
+        <h3>A few good ones...</h3>
+          <p>wp-pagenavi</p>
+          <p>Advanced custom fields</p>
+          <p>Custom Post Type UI</p>
+          <p>Share This / Addthis</p>
+          <p>Subscribe To Comments</p>
+          <p>Contact Form 7</p>
+          <p>Quick Cache</p>          
+          <p>Anyone have a favourite? </p>
+      </article>
+
+      <article>
+        <h3>Let's try add a social networking plugin!</h3>
+        <div class="build">
+          <p class="to-build">Go to plugins → Add New and search for "addthis"</p>
+          <img src="./Ladies Learning WordPress_files/content(6)" class="to-build">
+          <p class="to-build">Find the one that is called 'Follow Buttons by AddThis' and click install</p>
+          <img src="./Ladies Learning WordPress_files/content(7)" class="to-build">
+        </div>
+
+      </article>
+
+      <article>
+        <p>Finally, click Activate Plugin</p>
+        <img src="./Ladies Learning WordPress_files/content(8)">
+      </article>
+      <article>
+        <p>The plugin will automatically add social buttons to your posts, but let's take a look at a few of the features</p>
+        <img src="./Ladies Learning WordPress_files/content(9)">
+      </article>
+
+      <article>
+        <h3>Exercise #7: The Final Exercise!</h3>
+        <p>This is your time to shine and put everything you have learned today to work.</p>
+      </article>
+
+      <article>
+        <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 12.36.55 AM.png" alt="">
+      </article>
+
+      <article>
+        <div class="build">
+          <p class="to-build"><strong>Step 1:</strong> From the dashbaord, edit your "Home" page. Write a few lines about yourself and upload a photo.</p>
+          <p class="to-build"><strong>Step 2:</strong> Remember our <span class="red">page-home.php</span>? Open it up again and delete "Coming Soon..."</p>
+          <p class="to-build"><strong>Step 3:</strong> We're now going to write our own loop so we can get the page's content.</p>
+          <pre class="prettyprint to-build"><span class="pun">&lt;?</span><span class="pln">php </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> the_post</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+          
+</span><span class="pun">&lt;?</span><span class="pln">php endwhile</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
+
+        </div>
+      </article>
+
+      <article>
+         <div class="build">
+           <p class="to-build"><strong>Step 4:</strong> Inside the loop, we will put a div with the class of homeBlurb and use our template tag <span class="red">&lt;?php the_content(); ?&gt;</span> to fetch the content from our home page.</p>
+           <p class="small to-build">Our loop now looks like this:</p>
+<pre class="prettyprint to-build"><span class="pun">&lt;?</span><span class="pln">php </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> the_post</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+     
+     </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeBlurb"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php the_content</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+ 
+</span><span class="pun">&lt;?</span><span class="pln">php endwhile</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>         
+           
+                 <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 1.02.18 AM.png" alt="" class="to-build">
+         </div>
+      </article>
+
+      <article>
+        <div class="build">
+          <p class="to-build">Now that we have our Home content pulling in, lets work on our three columns.</p>
+          <p class="to-build"><strong>Step 5: </strong>Right underneath <span class="red">&lt;?php endwhile; ?&gt;</span>, create an empty div with the class of homeColumn.</p>
+          <pre class="prettyprint to-build"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>      
+          <p class="to-build"><strong>Step 6:</strong> Inside that div, insert an <span class="red">&lt;h3&gt;Tag Cloud&lt;/h3&gt;</span>  along with our template tag <span class="red">&lt;?php wp_tag_cloud(); ?&gt;</span></p>
+<pre class="prettyprint to-build"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;h3&gt;</span><span class="pln">Tag Cloud</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+  </span><span class="pun">&lt;?</span><span class="pln">php wp_tag_cloud</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+        </div>
+      </article>
+
+
+      <article>
+        <p><strong>Step 7:</strong> Create another column with the class of homeColumn but this time inside we're going to put the template tags for pulling in the latest posts</p>
+        <p>Here we use the <span class="red">&lt;?php wp_get_archives(); ?&gt;</span> template tag.</p>
+<pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;h3&gt;</span><span class="pln">Latest Posts</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+  </span><span class="tag">&lt;ul&gt;</span><span class="pln">    </span><span class="pun">&lt;?</span><span class="pln">php wp_get_archives</span><span class="pun">(</span><span class="str">'type=postbypost&amp;limit=10'</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">    </span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+<p>We wrap our template tag in &lt;ul&gt; and &lt;/ul&gt; because it is a unordered list of posts.</p>
+      </article>
+
+      <article>
+        <p><strong>Step 8:</strong> Create our third and final column. This time we use template tags to pull in a list of categories.</p>
+        <p>Here we use the <span class="red">&lt;?php wp_list_categories(); ?&gt;</span> template tag.</p>
+<pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;h3&gt;</span><span class="pln">Categories</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+  </span><span class="tag">&lt;ul&gt;</span><span class="pln">    </span><span class="pun">&lt;?</span><span class="pln">php wp_list_categories</span><span class="pun">(</span><span class="str">'title_li='</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">    </span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+      <p><strong>Step 9:</strong> You're done! I've provided you with some minimal style in your <span class="red">style.css</span> file. Find the section marked "CUSTOM HOME PAGE STYLE" and go crazy making it your own!</p>
+      </article>
+
+
+      <article>
+        <h3>What else with WordPress?</h3>
+        <p>Custom Post types</p>
+        <p>Advanced backend interfaces</p>
+        <p>Social Network community with buddypress</p>
+        <p>Plugin Development is an whole ‘nother world</p>
+        <p>WordCamps and Meetups - The WordPress community is amazing        </p>
+      </article>
+
+      <article>
+        <h3>Getting Help</h3>
+        <p>http://wordpress.stackexchange.com/</p>
+        <p>#WordPress on freenode</p>
+        <p>WordPress forums</p>
+        <p>The codex is the most valuable thing in the world.</p>
+      </article>
+
+      <article class="center">
+        <span style="font-size: 80px; color:#000; padding-top: 250px; display:block;">Questions? Thanks!</span>
+      </article>
+      
+    <div class="slide-area" id="prev-slide-area"></div><div class="slide-area" id="next-slide-area"></div></section>
+
+
+<link rel="stylesheet" type="text/css" href="./Ladies Learning WordPress_files/fonts.css"><link rel="stylesheet" type="text/css" href="./Ladies Learning WordPress_files/styles.css"><script type="text/javascript" src="./Ladies Learning WordPress_files/prettify.js"></script></body></html>

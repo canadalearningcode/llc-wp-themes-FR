@@ -1,0 +1,14 @@
+Facebook Like Button Code Before:
+<iframe src="//www.facebook.com/plugins/like.php?href=FILL_ME_IN&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+Facebook Like Button Code After:
+<iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink(); ?>&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+
+Twitter Tweet Button Before:
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="CHANGEME" data-count="vertical" data-via="wesbos">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+Twitter Tweet Button After:
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-count="vertical" data-via="wesbos">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+Post THumbnail
+<?php the_post_thumbnail('thumbnail', array('class' => 'alignleft')); ?>
+
