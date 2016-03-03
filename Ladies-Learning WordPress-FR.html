@@ -11,17 +11,17 @@
       max-width:100%;
     }
   </style><meta name="viewport" content="width=1100,height=750"><meta name="apple-mobile-web-app-capable" content="yes"></head>
-  
-  
 
-  
+
+
+
   <body style="display: none" class="loaded">
 
     <section class="slides layout-regular template-default">
       <img src="./Ladies Learning WordPress_files/ladieslearningcode-125x125.gif">
       <article class="home current">
         <h1>
-          Ladies Learning 
+          Ladies Learning
           <br>
           WordPress
         </h1>
@@ -29,10 +29,10 @@
           <em>Contenu original par:<a href="http://www.wesbos.com">Wes Bos</a></em>
           <br>
           <br>
-          <b>Votre présentatrice pour la journée:</b> 
+          <b>Votre présentatrice pour la journée:</b>
           <br>
           <b>Gwenvaël Ballu</b>
-   
+
         </p>
       </article>
 
@@ -42,7 +42,7 @@
           <li class="to-build">Comprendre WordPress et la technologie derrière</li>
           <li class="to-build">Débutez par installer WordPress localement</li>
           <li class="to-build">Installez WordPress</li>
-          <li class="to-build">Comprendre l'anatomie d'un thème Wordpress et comment en disposer le contenu</li>
+          <li class="to-build">Comprendre l'anatomie d'un thème WordPress et comment en disposer le contenu</li>
           <li class="to-build"><em>Hack</em> ton thème</li>
           <li class="to-build">Ajoute Facebook + Twitter</li>
           <li class="to-build">Exercice Final</li>
@@ -57,9 +57,9 @@
           <li class="to-build">Un système de gestion de contenu <em>open source</em>(code ouvert)</li>
           <li class="to-build">À la base, on l'utilisait beaucoup pour démarrer des blogues (c'est toujours le cas!)</li>
           <li class="to-build">Maintenant qu'il est assez puissant pour gérer des grans sites et applications (CNN, BBC, Mashable, etc...)</li>
-          <li class="to-build">Wordpress soutient plus de <b>60 millions</b> de sites web à travers le monde.</li></span>
+          <li class="to-build">WordPress soutient plus de <b>60 millions</b> de sites web à travers le monde.</li></span>
         </ul>
-        
+
       </article>
 
       <article id="vs" class="center">
@@ -202,7 +202,7 @@
 
       <article>
         <h3>Voici quelques bonnes ressources sécuritaires:</h3>
-          <p>Wordpress.org/extend/themes - Tous gratuits</p>
+          <p>WordPress.org/extend/themes - Tous gratuits</p>
           <p>Themify.me Payants &amp; Gratuits</p>
           <p>WooThemes.com - Payants et Gratuits</p>
           <p>ThemeForest.net - Payants / Pas chers</p>
@@ -265,10 +265,10 @@
           <p class="to-build">Vous avez maintenant votre nom sur votre site web. Facile, n'est-ce pas ?</p>
           <p class="to-build">Vous êtes douées ! Agmentons le niveau de difficulté un peu !</p>
         </div>
-      </article>  
+      </article>
 
       <article>
-        <h3 class="">Exercice #2: Tâche #2</h3>        
+        <h3 class="">Exercice #2: Tâche #2</h3>
         <div class="build">
           <p class="to-build">Placez une image dans l'entête (<em>header</em>).</p>
           <p class="to-build"><strong>Étape 1:</strong> Ouvrez <code>header.php</code> et trouvez la ligne identique à cell-ci:</p>
@@ -276,7 +276,7 @@
           </span><span class="pun">&lt;?</span><span class="pln">php bloginfo</span><span class="pun">(</span><span class="pln"> </span><span class="str">'name'</span><span class="pln"> </span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/a&gt;&lt;/h1&gt;</span><span class="pln"> </span></pre>
           <p class="to-build">Supprimez-la !</p>
           <p class="to-build">Maintenant, faisons 2 choses: 1. Créer un lien, 2. Mettez une image dans ce lien.</p>
-          
+
         </div>
 
       </article>
@@ -289,7 +289,7 @@
           <strong>Ajouter l'image</strong>
           <p style="font-size: 20px; margin:0">Nous avons besoin <code>du chemin (<em>path</em>) vers l'image</code> et <code>le nom du fichier</code></p>
           <pre class="prettyprint"><span class="pln">&lt;img src="</span><span class="pun">&lt;?</span><span class="pln">php bloginfo</span><span class="pun">(</span><span class="str">"template_directory"</span><span class="pun">);</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">/i/header.png" /&gt;</span></pre>
-          produit (<em>outputs</em>):  
+          produit (<em>outputs</em>):
           <pre class="prettyprint"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://localhost/wordpress/wp-content/themes/ladies-learning-code/i/header.png"</span><span class="pln"> </span><span class="atn">alt</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></pre>
 
       </article>
@@ -386,32 +386,32 @@
         <h3>CSS 101</h3>
         <div class="build">
           <p class="to-build"> Avant de personnaliser notre thème WordPress, il nous sera utile de connaître les bases du CSS. Nous n'approfondirons pas trop ce vaste sujet, mais jetons-y  un oeil rapidement.</p>
-          <p class="to-build">CSS tient pour Cascading Style Sheets, 
+          <p class="to-build">CSS tient pour Cascading Style Sheets,
             qui permet d'ajouter du style aux éléments de notre site comme: l'entête, les images, les balises div (de contenu), les liens, les listes et plus encore.</p>
-          <p class="to-build">Une déclaration CSS de base comprend 3 parties:<br><br>  <strong>Un sélecteur - une propriété - une valeur <br><br><em>selector - property - value.</strong></em> </p>    
+          <p class="to-build">Une déclaration CSS de base comprend 3 parties:<br><br>  <strong>Un sélecteur - une propriété - une valeur <br><br><em>selector - property - value.</strong></em> </p>
         </div>
       </article>
 
 <article>
 <h3>Les Sélecteurs (<em>Selectors</em>)</h3>
         <p>Le <strong>Sélecteur</strong> définit sur quel élément le CSS sera appliqué.</p>
-        <pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"wrapper"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/div&gt;</span><span class="pln"> 
+        <pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"wrapper"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/div&gt;</span><span class="pln">
 div#wrapper { ... }
 
-</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"post"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/div&gt;</span><span class="pln"> 
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"post"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/div&gt;</span><span class="pln">
 div.post { ... }
 
-</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"date"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/span&gt;</span><span class="pln"> 
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"date"</span><span class="tag">&gt;</span><span class="pln"> ... </span><span class="tag">&lt;/span&gt;</span><span class="pln">
 span.date { ... }
 
-</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln"> </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"meta"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">  
-span.category, div.meta { … } 
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"category"</span><span class="tag">&gt;&lt;/span&gt;</span><span class="pln"> </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"meta"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+span.category, div.meta { … }
 
-</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"parent"</span><span class="tag">&gt;&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"child"</span><span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;</span><span class="pln"> 
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"parent"</span><span class="tag">&gt;&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"child"</span><span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;</span><span class="pln">
 div.parent div.child { ... }
 
-        </span></pre>  
-</article>   
+        </span></pre>
+</article>
 
 
 <article>
@@ -421,7 +421,7 @@ div.parent div.child { ... }
 <pre class="prettyprint"><span class="com">#wrapper {</span><span class="pln">
   background (arrière-plan)</span><span class="pun">:</span><span class="pln"> black</span><span class="pun">;</span><span class="pln">
   border (bordure)</span><span class="pun">:</span><span class="lit">2px</span><span class="pln"> solid green</span><span class="pun">;</span><span class="pln">
-  font</span><span class="pun">-</span><span class="pln">family (type de police)</span><span class="pun">:</span><span class="typ">Georgia</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln"> 
+  font</span><span class="pun">-</span><span class="pln">family (type de police)</span><span class="pun">:</span><span class="typ">Georgia</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln">
 </span><span class="pun">}</span><span class="pln"> </span></pre>
 <p>Il y en a plusieurs sur votre feuille de référence, jetons-y un oeil maintenant...</p>
 </article>
@@ -445,7 +445,7 @@ div.parent div.child { ... }
 
 </article><article>
 <pre class="prettyprint"><span class="pun">.</span><span class="pln">post h2 a </span><span class="pun">{</span><span class="pln"> </span><span class="com">/* cible .post -&gt; H2 -&gt; lien */</span><span class="pln">
-  font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">40px</span><span class="pun">;</span><span class="pln"> 
+  font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span class="lit">40px</span><span class="pun">;</span><span class="pln">
   font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> georgia</span><span class="pun">,</span><span class="pln"> sans</span><span class="pun">-</span><span class="pln">serif</span><span class="pun">;</span><span class="pln"> </span><span class="com"> /* Change la police */</span><span class="pln">
   border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span class="lit">3px</span><span class="pln"> solid goldenRod</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Change la bordure<br> du bas pour la couleur goldenRod */</span><span class="pln">
 </span><span class="pun">}</span></pre>
@@ -466,10 +466,10 @@ div.parent div.child { ... }
   height</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;</span><span class="pln">
   overflow</span><span class="pun">:</span><span class="pln">scroll</span><span class="pun">;</span><span class="pln"> </span><span class="com">/* Une "scrollbar" sera ajouté à tout élément <br>   ayant une hauteur de plus de 500px */</span><span class="pln">
 </span><span class="pun">}</span></pre>
-  
+
 </article>
 
-   
+
 
 
 
@@ -575,7 +575,7 @@ div.parent div.child { ... }
           <p class="to-build">Notre page d'accueil montre 5 <em>blog post</em> à la fois, mais une page d'article n'en montre qu'1 seul.</p>
           <p class="to-build">Chaque page requiert au moins une boucle de base afin d'afficher son contenu.</p>
         </div>
-      
+
       </article>
 
       <article>
@@ -587,7 +587,7 @@ div.parent div.child { ... }
         <p>La logique derrière la <em>loop</em>:</p>
 <pre class="prettyprint"><span class="pln">  </span><span class="kwd">if</span><span class="pln"> we have posts
       </span><span class="kwd">while</span><span class="pln"> we have posts
-         </span><span class="lit">1.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Code</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> here </span><span class="kwd">is</span><span class="pln"> run once </span><span class="kwd">for</span><span class="pln"> every piece of content 
+         </span><span class="lit">1.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Code</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> here </span><span class="kwd">is</span><span class="pln"> run once </span><span class="kwd">for</span><span class="pln"> every piece of content
             retrieved </span><span class="kwd">from</span><span class="pln"> the database
          </span><span class="lit">2.</span><span class="pln"> </span><span class="typ">We</span><span class="pln"> might want to output the title</span><span class="pun">,</span><span class="pln"> the date </span><span class="kwd">and</span><span class="pln"> the content
       </span><span class="kwd">end</span><span class="pln"> </span><span class="kwd">while</span><span class="pln">
@@ -624,7 +624,7 @@ div.parent div.child { ... }
 
       <article>
         <h3>Les balises du <em>template</em></h3>
-        
+
         <div class="build">
         <p class="to-build">Vous vous demandez comment afficher le contenu de votre page lors que vous êtes à l'intérieur de la <em>loop</em>?</p>
           <p class="to-build">Les balises du <em>template</em> sont de petites fonctions PHP qui produisent (<em>output</em>) le contenu de votre site.</p>
@@ -678,7 +678,7 @@ div.parent div.child { ... }
       <article>
         <h3>2. Ajoutez une miniature d'article (<em>post thumbnail</em>)
           avec des <em>template tags</em> à notre single.php</h3>
-        <p>Associer une image à chaque article ? Allez au <em>wordpress admin</em> et éditez un de vos articles.</p>
+        <p>Associer une image à chaque article ? Allez au <em>WordPress admin</em> et éditez un de vos articles.</p>
         <p>En bas à droite, cliquez sur <em>set featured image</em><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.31.47 PM.png"></p>
         <p>sélectionnez et téléverser un fichier</p>
         <p>Quand le téléversement est terminé, défilez vers le bas et sélectionnez <em>"use as featued image"</em></p>
@@ -689,13 +689,13 @@ div.parent div.child { ... }
         <div class="build">
         <p class="to-build">Cliquez sur « Mise à jour » (<em>update</em>) <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.35.29 PM.png" alt=""></p>
           <p class="to-build">Puis sur <em>View Post</em>. <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.35.53 PM.png" alt=""></p>
-          <p class="to-build">L'image ne s'affiche pas ! Pourquoi ? 
+          <p class="to-build">L'image ne s'affiche pas ! Pourquoi ?
             Nous devons utiliser le <em>template tag</em> pour l'ajouter à notre thème.</p>
           <p class="to-build">Rappel: <span class="red">&lt;?php the_post_thumbnail(); ?&gt;</span> Placez-le au dessus du <em>template tag</em> <span class="red">&lt;?php the_content(); ?&gt;</span></p>
           <p class="to-build"><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.43.19 PM.png"></p>
         </div>
 
-      </article>  
+      </article>
 
       <article class="smallcode">
         <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-22 at 10.44.17 PM.png" alt="">
@@ -703,7 +703,7 @@ div.parent div.child { ... }
         <pre class="prettyprint"><span class="pun">&lt;?</span><span class="pln">php the_post_thumbnail</span><span class="pun">(</span><span class="str">'thumbnail'</span><span class="pun">,</span><span class="pln"> array</span><span class="pun">(</span><span class="str">'class'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'alignleft'</span><span class="pun">));</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
       </article>
 
-      
+
 
       <article>
         <h3>Peronnaliser vos <em>Templates</em> de pages</h3>
@@ -786,7 +786,7 @@ div.parent div.child { ... }
       </article>
 
       <article class="cols">
-        
+
         <p><strong>Étape 1:</strong> Dashboard → Appearance → Widgets</p>
         <p><strong>Étape 2:</strong> Choissir un <em>widget</em> et le <em>drag & drop</em> dans "Primary Widget Area"</p>
         <p><strong>Étape 3:</strong> Ajoutez un titre de votre choix.</p>
@@ -812,7 +812,7 @@ div.parent div.child { ... }
       </article>
 
       <article>
-        <p>Tous les <em>Plugins</em> sont dans /wp-content/plugins 
+        <p>Tous les <em>Plugins</em> sont dans /wp-content/plugins
           mais nous pouvons aussi les trouver en passant par notre tableau de bord, tout comme les thèmes.</p>
         <p><img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 12.17.14 AM.png" alt=""></p>
       </article>
@@ -834,7 +834,7 @@ div.parent div.child { ... }
           <p>Share This / Addthis</p>
           <p>Subscribe To Comments</p>
           <p>Contact Form 7</p>
-          <p>Quick Cache</p>          
+          <p>Quick Cache</p>
           <p>Quelqu'un a des préférés ? </p>
       </article>
 
@@ -873,7 +873,7 @@ div.parent div.child { ... }
           <p class="to-build"><strong>Étape 2:</strong>Vous souvez-vous de notre <span class="red">page-home.php</span>? Ouvrez-le et supprimez "Coming Soon..."</p>
           <p class="to-build"><strong>Étape 3:</strong> Nous devrons maintenant écrire notre propre <em>loop</em> pour aller chercher et afficher le contenu de la page.</p>
           <pre class="prettyprint to-build"><span class="pun">&lt;?</span><span class="pln">php </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> the_post</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
-          
+
 </span><span class="pun">&lt;?</span><span class="pln">php endwhile</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
 
         </div>
@@ -884,11 +884,11 @@ div.parent div.child { ... }
            <p class="to-build"><strong>Étape 4:</strong> Dans la <em>loop</em>, nous allons ajouter une div avec la classe <em>homeBlurb</em> et utiliser notre <em>template tag </em> <span class="red">&lt;?php the_content(); ?&gt;</span> pour aller chercher le contenu de la page.</p>
            <p class="small to-build">Notre <em>loop</em> ressemble maintenant à ceci:</p>
 <pre class="prettyprint to-build"><span class="pun">&lt;?</span><span class="pln">php </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="kwd">while</span><span class="pun">(</span><span class="pln">have_posts</span><span class="pun">())</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> the_post</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="pln">
-     
+
      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeBlurb"</span><span class="tag">&gt;</span><span class="pun">&lt;?</span><span class="pln">php the_content</span><span class="pun">();</span><span class="pln"> </span><span class="pun">?&gt;</span><span class="tag">&lt;/div&gt;</span><span class="pln">
- 
-</span><span class="pun">&lt;?</span><span class="pln">php endwhile</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>         
-           
+
+</span><span class="pun">&lt;?</span><span class="pln">php endwhile</span><span class="pun">;</span><span class="pln"> </span><span class="pun">?&gt;</span></pre>
+
                  <img src="./Ladies Learning WordPress_files/Screen Shot 2011-11-23 at 1.02.18 AM.png" alt="" class="to-build">
          </div>
       </article>
@@ -897,7 +897,7 @@ div.parent div.child { ... }
         <div class="build">
           <p class="to-build">Maintenant que nous avons notre contenu de page, travaillons sur nos 3 colonnes.</p>
           <p class="to-build"><strong>Étape 5: </strong>Juste sous <span class="red">&lt;?php endwhile; ?&gt;</span>, Créons une div vide avec la classe <em>homeColumn</em>.</p>
-          <pre class="prettyprint to-build"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>      
+          <pre class="prettyprint to-build"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
           <p class="to-build"><strong>Étape 6:</strong> dans cette div, insérez un <span class="red">&lt;h3&gt;Tag Cloud&lt;/h3&gt;</span>  avec notre <em>template tag</em>  <span class="red">&lt;?php wp_tag_cloud(); ?&gt;</span></p>
 <pre class="prettyprint to-build"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"homeColumn"</span><span class="tag">&gt;</span><span class="pln">
   </span><span class="tag">&lt;h3&gt;</span><span class="pln">Tag Cloud</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
@@ -935,7 +935,7 @@ div.parent div.child { ... }
         <p>Des interfaces backend avancées</p>
         <p>Un réseau social avec buddypress</p>
         <p>Le développement de plugiciels est un autre monde, complètement!</p>
-        <p>WordCamps et <em>Meetups</em> - La communauté Wordpress est géniale !</p>
+        <p>WordCamps et <em>Meetups</em> - La communauté WordPress est géniale !</p>
       </article>
 
       <article>
@@ -949,7 +949,7 @@ div.parent div.child { ... }
       <article class="center">
         <span style="font-size: 80px; color:#000; padding-top: 250px; display:block;">Questions? Merci!</span>
       </article>
-      
+
     <div class="slide-area" id="prev-slide-area"></div><div class="slide-area" id="next-slide-area"></div></section>
 
 
